@@ -1,0 +1,12 @@
+extends layout.pug
+block content
+  section#content
+    h2=text
+    if hint
+      p=hint
+      //our clickable link to see answer or question of cards 
+    a(href=`${id}?cardSide=${sideToShow}`)= sideToShow
+    br
+    a(href='/cards') Next card
+    br
+    a(href='/hello') Home

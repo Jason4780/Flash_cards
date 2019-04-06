@@ -1,0 +1,16 @@
+doctype html
+html(lang="en")
+  head
+    title Landing Page
+    link(rel='stylesheet', href='/stylesheets/style.css')
+  h2 Flash cards!
+  body
+    include includes/headers.pug
+      p This is gonna be fun!
+    if person
+      h2 hello #{person}!
+      form(action="/goodbye", method="post")
+        button(type='submit') Bye
+    block content
+    footer
+        p an app to help you study
